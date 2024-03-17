@@ -3,6 +3,9 @@ name = "my_minigrep321"
 version = "0.1.1"
 edition = "2021"
 license = "MIT OR Apache-2.0"
+homepage = "https://crates.io/crates/my_minigrep321"
+repository = "https://github.com/riptide03/minigrep"
+documentation = "https://github.com/riptide03/minigrep/blob/main/README.md"
 description = "A command line tool to retrieve all lines from a file containing a given string."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
