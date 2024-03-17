@@ -1,6 +1,7 @@
 use std::error::Error;
 use std::{env, fs};
 
+/// Runs this program with the given configuration
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.file_path)?;
 
@@ -17,6 +18,7 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+/// Contains the configuration for running this program
 pub struct Config {
     pub query: String,
     pub file_path: String,
@@ -49,6 +51,7 @@ impl Config {
     }
 }
 
+/// Prints all lines from contents that contains query (case-sensitive)
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
         .lines()
@@ -56,6 +59,7 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
         .collect()
 }
 
+/// Prints all lines from contents that contains query (case-insensitive)
 pub fn search_case_insensitive<'a>(
     query: &str,
     contents: &'a str,
